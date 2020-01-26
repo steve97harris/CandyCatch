@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Grand Hotel
+Author: Astigmatic
+Url: http://www.fontsquirrel.com/fonts/grand-hotel
+
+Font: Pompiere 
+Author: Sorkin Type Co
+Url: http://www.fontsquirrel.com/fonts/pompiere
