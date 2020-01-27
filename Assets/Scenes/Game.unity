@@ -194,6 +194,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766554806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766554807}
+  - component: {fileID: 766554808}
+  m_Layer: 0
+  m_Name: CandySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766554807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766554806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766554808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766554806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72c266f77b60c6459f7ca8ccca96898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxX: 0
+  candies:
+  - {fileID: 8679974148271616315, guid: 8ee563c84dee70d44b8c90bf2fc98695, type: 3}
+  - {fileID: 7010252316266363335, guid: e4cf5aa42755bab40b4f3fc8f6ca127c, type: 3}
+  - {fileID: 7941602400678206438, guid: bbb7a8f570680a048be7cfbc76dd6e62, type: 3}
+  - {fileID: 4315933586791370592, guid: 4b036951d5bf2574ebde1722cb5f3a45, type: 3}
 --- !u!1 &1215508956
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +322,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1446470080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446470082}
+  - component: {fileID: 1446470081}
+  m_Layer: 0
+  m_Name: Boundary
+  m_TagString: Boundary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1446470081
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446470080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 23, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1446470082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446470080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577657455
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +393,7 @@ GameObject:
   - component: {fileID: 1577657458}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,15 +502,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy4
       objectReference: {fileID: 0}
+    - target: {fileID: 4315933586791370592, guid: 4b036951d5bf2574ebde1722cb5f3a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4315933586791370598, guid: 4b036951d5bf2574ebde1722cb5f3a45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.26
+      value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: 4315933586791370598, guid: 4b036951d5bf2574ebde1722cb5f3a45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.93
+      value: 7.72
       objectReference: {fileID: 0}
     - target: {fileID: 4315933586791370598, guid: 4b036951d5bf2574ebde1722cb5f3a45,
         type: 3}
@@ -465,15 +576,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy2
       objectReference: {fileID: 0}
+    - target: {fileID: 7010252316266363335, guid: e4cf5aa42755bab40b4f3fc8f6ca127c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7010252316266363333, guid: e4cf5aa42755bab40b4f3fc8f6ca127c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.12
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 7010252316266363333, guid: e4cf5aa42755bab40b4f3fc8f6ca127c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7010252316266363333, guid: e4cf5aa42755bab40b4f3fc8f6ca127c,
         type: 3}
@@ -534,15 +650,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy3
       objectReference: {fileID: 0}
+    - target: {fileID: 7941602400678206438, guid: bbb7a8f570680a048be7cfbc76dd6e62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7941602400678206436, guid: bbb7a8f570680a048be7cfbc76dd6e62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.99
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 7941602400678206436, guid: bbb7a8f570680a048be7cfbc76dd6e62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 9.46
       objectReference: {fileID: 0}
     - target: {fileID: 7941602400678206436, guid: bbb7a8f570680a048be7cfbc76dd6e62,
         type: 3}
@@ -603,15 +724,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy1
       objectReference: {fileID: 0}
+    - target: {fileID: 8679974148271616315, guid: 8ee563c84dee70d44b8c90bf2fc98695,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8679974148271616313, guid: 8ee563c84dee70d44b8c90bf2fc98695,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.44
+      value: 6.99
       objectReference: {fileID: 0}
     - target: {fileID: 8679974148271616313, guid: 8ee563c84dee70d44b8c90bf2fc98695,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 5.77
       objectReference: {fileID: 0}
     - target: {fileID: 8679974148271616313, guid: 8ee563c84dee70d44b8c90bf2fc98695,
         type: 3}
