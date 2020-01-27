@@ -19,12 +19,14 @@ public class Candy : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             // Increment score
+            GameManager.instance.IncrementScore();
             Destroy(gameObject);
         }
         
         else if (collider.gameObject.tag == "Boundary")
         {
             // Decrease lives
+            GameManager.instance.DecreaseLife();
             Destroy(gameObject);
         }
     }

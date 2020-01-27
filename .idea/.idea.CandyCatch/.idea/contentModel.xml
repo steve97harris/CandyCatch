@@ -6,9 +6,24 @@
     <e p="C:\Users\Administrator\Documents\GitHub\CandyCatch" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Fonts" t="Include">
+          <e p="Caviar-Dreams" t="Include">
+            <e p="Nymphont License.txt" t="Include" />
+          </e>
+          <e p="grand-hotel" t="Include">
+            <e p="SIL Open Font License.txt" t="Include" />
+          </e>
+          <e p="pompiere" t="Include">
+            <e p="SIL Open Font License.txt" t="Include" />
+          </e>
+          <e p="Vanilla" t="Include">
+            <e p="Freeware License.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Candy.cs" t="Include" />
           <e p="CandySpawner.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">

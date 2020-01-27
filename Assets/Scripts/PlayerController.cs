@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-        
+        // PossibleDeath();
     }
 
     void Update()
@@ -23,7 +23,16 @@ public class PlayerController : MonoBehaviour
         {
             Move();   
         }
-    } 
+    }
+
+    // void PossibleDeath()
+    // {
+    //     if (GameManager.instance.lives == 0)
+    //     {
+    //         GameManager.instance.Die();
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     private void Move()
     {
