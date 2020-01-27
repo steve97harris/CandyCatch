@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject livesHolder;
+    public GameObject gameOverHolder;
     
     public int score = 0;
     public Text scoreText;
@@ -58,6 +59,8 @@ public class GameManager : MonoBehaviour
     {
         gameOver = true;
         print("GameOver!");
+        
+        gameOverHolder.transform.GetChild(lives).gameObject.SetActive(true);
     }
     
 
