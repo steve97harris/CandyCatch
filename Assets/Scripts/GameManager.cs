@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
             score++;
             scoreText.text = score.ToString();        
         }
-
         // print("Score = " + score);
     }
 
