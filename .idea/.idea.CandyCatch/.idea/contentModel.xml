@@ -10,6 +10,9 @@
           <e p="Caviar-Dreams" t="Include">
             <e p="Nymphont License.txt" t="Include" />
           </e>
+          <e p="chunkfive" t="Include">
+            <e p="SIL Open Font License.txt" t="Include" />
+          </e>
           <e p="grand-hotel" t="Include">
             <e p="SIL Open Font License.txt" t="Include" />
           </e>

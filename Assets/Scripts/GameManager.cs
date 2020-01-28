@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject livesHolder;
-    public GameObject gameOverHolder;
+    public GameObject gameOverPanel;
     
     public int score = 0;
     public Text scoreText;
@@ -34,8 +34,12 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore()
     {
-        score++;
-        scoreText.text = score.ToString();
+        if (!gameOver)
+        {
+            score++;
+            scoreText.text = score.ToString();        
+        }
+
         // print("Score = " + score);
     }
 
@@ -46,7 +50,7 @@ public class GameManager : MonoBehaviour
             lives--;
             print("Lives = " + lives);
 
-            livesHolder.transform.GetChild(lives).gameObject.SetActive(false);
+            livesHolder.transform.GetChild(lives).gameObject.SetActive(false);        // Gets children of 'Lives Holder' game object, set's each object as inactive when losing a life.
         }
 
         if (lives <= 0)
@@ -58,9 +62,13 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         gameOver = true;
-        print("GameOver!");
         
-        gameOverHolder.transform.GetChild(lives).gameObject.SetActive(true);
+        CandySpawner.instance.StopSpawningCandies();        // Finds instance of 'CandySpawner' script and stops spawning candies.               
+        GameObject.Find("Player").GetComponent<PlayerController>().canMove = false;        // Finds game object 'player', gets component 'player controller' script, sets 'canMove' to false. 
+
+        gameOverPanel.SetActive(true);
+
+        print("GameOver!");
     }
     
 
